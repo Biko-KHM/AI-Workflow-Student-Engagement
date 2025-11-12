@@ -1,0 +1,20 @@
+"""
+Simple Flask API for model deployment.
+"""
+
+from flask import Flask, request, jsonify
+import joblib
+import numpy as np
+
+app = Flask(__name__)
+model = joblib.load("models/gbt_model.joblib")
+
+@app.route("/predict", methods=["POST"])
+def predict():
+    data = request.get_json()
+    features = np.array(data["features"]).reshape(1, -1)
+    prediction = model.predict(features)[0]
+    return jsonify({"readmission_risk": int(prediction)})
+
+if __name__ == "__main__":
+    app.run(debug=True)

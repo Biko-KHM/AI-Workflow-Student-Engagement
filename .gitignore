@@ -1,0 +1,14 @@
+# Ignore virtual environment and cache files
+venv/
+.env/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.log
+.DS_Store
+.ipynb_checkpoints/
+data/raw/*.csv
+models/
+artifacts/
+
