@@ -1,0 +1,20 @@
+# Core Data Science
+pandas
+numpy
+scikit-learn
+joblib
+
+# Visualization
+matplotlib
+seaborn
+
+# Notebook Utilities
+jupyter
+notebook
+
+# Optional – for app or API (only if you used them)
+flask
+streamlit
+
+# For reproducibility
+python-dotenv
